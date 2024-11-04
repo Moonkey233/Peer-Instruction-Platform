@@ -31,7 +31,7 @@ class AdminTest {
         Admin admin = new Admin()
         admin.setAdminName("admin")
         admin.setName("超级管理员")
-        admin.setIsAvalible(1)
+        admin.setisAvailable(1)
         String passwordMd5= new Md5Hash("admin","admin",2).toHex()
         admin.setPassword(passwordMd5)
         println adminService.addAdmin(admin)

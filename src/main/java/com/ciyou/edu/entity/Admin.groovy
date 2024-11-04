@@ -17,7 +17,7 @@ class Admin implements Serializable{
     //联系方式
     private String phone
     //状态 1：正常 2：冻结
-    private Integer isAvalible
+    private Integer isAvailable
     //权限
     private List<Permission> permissionList
 
@@ -45,12 +45,12 @@ class Admin implements Serializable{
         this.password = password
     }
 
-    Integer getIsAvalible() {
-        return isAvalible
+    Integer getisAvailable() {
+        return isAvailable
     }
 
-    void setIsAvalible(Integer isAvalible) {
-        this.isAvalible = isAvalible
+    void setisAvailable(Integer isAvailable) {
+        this.isAvailable = isAvailable
     }
 
     List<Permission> getPermissionList() {
@@ -86,7 +86,7 @@ class Admin implements Serializable{
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
-                ", isAvalible=" + isAvalible +
+                ", isAvailable=" + isAvailable +
                 ", permissionList=" + permissionList +
                 '}';
     }

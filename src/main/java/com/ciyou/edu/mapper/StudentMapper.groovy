@@ -16,7 +16,7 @@ import org.apache.ibatis.annotations.Update
  */
 interface StudentMapper {
 
-    @Select("select * from Student where  isAvalible = 1 order by sid")
+    @Select("select * from Student where  isAvailable = 1 order by sid")
     @Results([
             //查询关联对象
             @Result(property = "classes",
@@ -24,7 +24,7 @@ interface StudentMapper {
                     one = @One(select = "com.ciyou.edu.mapper.ClassesMapper.getClasses"))])
     Page<Student> findAllStudent()
 
-    @Select("select * from Student where  isAvalible = 1 and studentId = #{studentId}")
+    @Select("select * from Student where  isAvailable = 1 and studentId = #{studentId}")
     @Results([
             //查询关联对象
             @Result(property = "classes",
@@ -35,7 +35,7 @@ interface StudentMapper {
     @Insert("insert into Student(studentId,name,password,sex,age,createTime,mobile,parentMobile,email,parentEmail,picImg,classesId) values(#{studentId},#{name},#{password},#{sex},#{age},#{createTime},#{mobile},#{parentMobile},#{email},#{parentEmail},#{picImg},#{classes.classesId})")
     int addStudent(Student student)
 
-    @Select("select * from Student where  isAvalible = 1 and sid = #{sid}")
+    @Select("select * from Student where  isAvailable = 1 and sid = #{sid}")
     @Results([
             //查询关联对象
             @Result(property = "classes",
@@ -43,10 +43,10 @@ interface StudentMapper {
                     one = @One(select = "com.ciyou.edu.mapper.ClassesMapper.getClasses"))])
     Student getStudentById(@Param("sid")String sid)
 
-    @Update("update Student set isAvalible = 0 where sid = #{sid}")
+    @Update("update Student set isAvailable = 0 where sid = #{sid}")
     int deleteStudent(@Param("sid")String sid)
 
-    @Select("select * from Student where (studentId like '%\${value}%' or name like '%\${value}%') and isAvalible = 1 ")
+    @Select("select * from Student where (studentId like '%\${value}%' or name like '%\${value}%') and isAvailable = 1 ")
     @Results([
             //查询关联对象
             @Result(property = "classes",
@@ -57,7 +57,7 @@ interface StudentMapper {
     @Update("update Student set name = #{name}, sex = #{sex}, age = #{age} , mobile = #{mobile} , parentMobile = #{parentMobile} , email = #{email} , parentEmail = #{parentEmail} , classesId = #{classes.classesId} where sid = #{sid}")
     int updateStudent(Student student)
 
-    @Select("Select Student.* from Student,Roster where Student.classesId = Roster.classesId and Roster.tid = #{tid} and Student.isAvalible = 1")
+    @Select("Select Student.* from Student,Roster where Student.classesId = Roster.classesId and Roster.tid = #{tid} and Student.isAvailable = 1")
     @Results([
             //查询关联对象
             @Result(property = "classes",
@@ -65,7 +65,7 @@ interface StudentMapper {
                     one = @One(select = "com.ciyou.edu.mapper.ClassesMapper.getClasses"))])
     Page<Student> findByTeacherAndPage(@Param("tid")Integer tid)
 
-    @Select("select Student.* from Student,Roster where (Student.studentId like '%\${value}%' or Student.name like '%\${value}%') and Student.isAvalible = 1 and Student.classesId = Roster.classesId and Roster.tid = #{tid}")
+    @Select("select Student.* from Student,Roster where (Student.studentId like '%\${value}%' or Student.name like '%\${value}%') and Student.isAvailable = 1 and Student.classesId = Roster.classesId and Roster.tid = #{tid}")
     @Results([
             //查询关联对象
             @Result(property = "classes",

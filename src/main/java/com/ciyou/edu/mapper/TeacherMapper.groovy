@@ -16,7 +16,7 @@ import org.apache.ibatis.annotations.Update
  */
 interface TeacherMapper {
 
-    @Select("select * from Teacher where  isAvalible = 1 order by tid")
+    @Select("select * from Teacher where  isAvailable = 1 order by tid")
     @Results([
             //查询关联对象
             @Result(property = "subject",
@@ -24,7 +24,7 @@ interface TeacherMapper {
                     one = @One(select = "com.ciyou.edu.mapper.SubjectMapper.getSubject"))])
     Page<Teacher> findAllTeacher()
 
-    @Select("select * from Teacher where  isAvalible = 1 and teacherId = #{teacherId}")
+    @Select("select * from Teacher where  isAvailable = 1 and teacherId = #{teacherId}")
     @Results([
             //查询关联对象
             @Result(property = "subject",
@@ -35,7 +35,7 @@ interface TeacherMapper {
     @Insert("insert into Teacher(teacherId,name,password,sex,createTime,mobile,email,picImg,subjectId) values(#{teacherId},#{name},#{password},#{sex},#{createTime},#{mobile},#{email},#{picImg},#{subject.subjectId})")
     int addTeacher(Teacher teacher)
 
-    @Select("select * from Teacher where  isAvalible = 1 and tid = #{tid}")
+    @Select("select * from Teacher where  isAvailable = 1 and tid = #{tid}")
     @Results([
             //查询关联对象
             @Result(property = "subject",
@@ -47,10 +47,10 @@ interface TeacherMapper {
     @Update("update Teacher set name = #{name} , sex = #{sex} , mobile = #{mobile} , email = #{email} , picImg = #{picImg} , subjectId = #{subject.subjectId} where tid = #{tid}")
     int updateTeacher(Teacher teacher)
 
-    @Update("update Teacher set isAvalible = 0 where tid = #{tid}")
+    @Update("update Teacher set isAvailable = 0 where tid = #{tid}")
     int deleteTeacher(@Param("tid")Integer tid)
 
-    @Select("select * from Teacher where (teacherId like '%\${value}%' or name like '%\${value}%') and isAvalible = 1 ")
+    @Select("select * from Teacher where (teacherId like '%\${value}%' or name like '%\${value}%') and isAvailable = 1 ")
     @Results([
             //查询关联对象
             @Result(property = "subject",

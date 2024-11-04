@@ -33,7 +33,7 @@ class Student implements Serializable{
     //对应班级表
     private Classes classes
     //状态 1：正常 2：冻结
-    private Integer isAvalible
+    private Integer isAvailable
 
     private Integer lockState
 
@@ -134,12 +134,12 @@ class Student implements Serializable{
     }
 
 
-    Integer getIsAvalible() {
-        return isAvalible
+    Integer getisAvailable() {
+        return isAvailable
     }
 
-    void setIsAvalible(Integer isAvalible) {
-        this.isAvalible = isAvalible
+    void setisAvailable(Integer isAvailable) {
+        this.isAvailable = isAvailable
     }
 
     String getPicImg() {
@@ -175,7 +175,7 @@ class Student implements Serializable{
                 ", email='" + email + '\'' +
                 ", picImg='" + picImg + '\'' +
                 ", classes=" + classes +
-                ", isAvalible=" + isAvalible +
+                ", isAvailable=" + isAvailable +
                 ", lockState=" + lockState +
                 '}';
     }

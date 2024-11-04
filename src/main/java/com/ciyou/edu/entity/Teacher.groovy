@@ -20,7 +20,7 @@ class Teacher implements Serializable{
     //创建时间
     private Date createTime
     //状态 1：正常 2：冻结
-    private Integer isAvalible
+    private Integer isAvailable
     //联系方式
     private String mobile
     //email
@@ -78,12 +78,12 @@ class Teacher implements Serializable{
         this.createTime = createTime
     }
 
-    Integer getIsAvalible() {
-        return isAvalible
+    Integer getisAvailable() {
+        return isAvailable
     }
 
-    void setIsAvalible(Integer isAvalible) {
-        this.isAvalible = isAvalible
+    void setisAvailable(Integer isAvailable) {
+        this.isAvailable = isAvailable
     }
 
     String getMobile() {
@@ -128,7 +128,7 @@ class Teacher implements Serializable{
                 ", password='" + password + '\'' +
                 ", sex=" + sex +
                 ", createTime=" + createTime +
-                ", isAvalible=" + isAvalible +
+                ", isAvailable=" + isAvailable +
                 ", mobile='" + mobile + '\'' +
                 ", email='" + email + '\'' +
                 ", picImg='" + picImg + '\'' +

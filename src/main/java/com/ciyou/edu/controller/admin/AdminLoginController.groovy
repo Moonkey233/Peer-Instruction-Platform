@@ -54,6 +54,7 @@ class AdminLoginController {
         //将用户名和密码封装到继承了UsernamePasswordToken的userToken
         UserToken userToken = new UserToken(admin?.getAdminName(), admin?.getPassword(), ADMIN_LOGIN_TYPE)
         userToken.setRememberMe(false)
+        System.out.println(admin?.getPassword());
         try {
             //认证
             // 传到ModularRealmAuthenticator类中，然后根据ADMIN_LOGIN_TYPE传到AdminShiroRealm的方法进行认证
