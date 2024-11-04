@@ -1,6 +1,6 @@
-## CIYOU
+## Peer-Instruction-Platform
 
-### 思源教育
+### 同伴教学平台
 
 该项目是基于翻转课堂实现的小学网络教育平台。
 
