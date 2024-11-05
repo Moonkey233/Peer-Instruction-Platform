@@ -35,3 +35,7 @@
 0:0:0:0:0:0:0:1 - - [05/Nov/2024:13:15:25 +0800] "GET /static/dist/js/demo.js HTTP/1.1" 304 - http-bio-8080-exec-7 259
 0:0:0:0:0:0:0:1 - - [05/Nov/2024:13:15:25 +0800] "GET /static/js/admin/admin/adminUpdatePwd.js HTTP/1.1" 304 - http-bio-8080-exec-9 252
 0:0:0:0:0:0:0:1 - - [05/Nov/2024:13:15:25 +0800] "GET /static/js/admin/admin/adminUpdateInfo.js HTTP/1.1" 304 - http-bio-8080-exec-1 239
+0:0:0:0:0:0:0:1 - - [05/Nov/2024:21:30:43 +0800] "GET /adminLogin HTTP/1.1" 200 3634 http-bio-8080-exec-1 164
+0:0:0:0:0:0:0:1 - - [05/Nov/2024:21:30:43 +0800] "GET /favicon.ico HTTP/1.1" 200 946 http-bio-8080-exec-3 8
+0:0:0:0:0:0:0:1 - - [05/Nov/2024:21:30:45 +0800] "POST /adminLogin HTTP/1.1" 200 75 http-bio-8080-exec-4 536
+0:0:0:0:0:0:0:1 - - [05/Nov/2024:21:30:46 +0800] "GET /admin/admin HTTP/1.1" 200 23973 http-bio-8080-exec-5 718
