@@ -206,9 +206,9 @@
                 <version>2.2</version>
                 <configuration>
                     <path>/</path>
-                    <port>8080</port>
+                    <port>80</port>
                     <uriEncoding>UTF-8</uriEncoding>
-                    <url>http://localhost:8080/manager/text</url>
+                    <url>http://localhost:80/manager/text</url>
                     <server>tomcat7</server>
                     <uriEncoding>UTF-8</uriEncoding>
                     <contextReloadable>true</contextReloadable>
