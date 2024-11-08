@@ -278,3 +278,4 @@
 0:0:0:0:0:0:0:1 - - [08/Nov/2024:15:59:18 +0800] "GET /logout HTTP/1.1" 302 - http-bio-8080-exec-3 966
 0:0:0:0:0:0:0:1 - - [08/Nov/2024:15:59:19 +0800] "GET / HTTP/1.1" 302 - http-bio-8080-exec-3 256
 0:0:0:0:0:0:0:1 - - [08/Nov/2024:15:59:19 +0800] "GET /login;JSESSIONID=1bb852f7-cab8-4b7f-bc90-69e6faa66a2d HTTP/1.1" 200 3639 http-bio-8080-exec-3 415
+0:0:0:0:0:0:0:1 - - [08/Nov/2024:16:27:21 +0800] "GET /adminLogin HTTP/1.1" 200 3648 http-bio-8080-exec-1 616
