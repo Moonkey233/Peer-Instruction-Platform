@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>CIYOU | 我的小测</title>
+  <title>同伴教学 | 我的小测</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -33,9 +33,9 @@
         <!-- Logo -->
         <a href="${base}/teacher/index" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>C</b>.</span>
+            <span class="logo-mini"><b>教</b>.</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>CI</b>YOU</span>
+            <span class="logo-lg"><b>同伴教学</b>管理平台</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <!-- 顶部菜单栏 -->
@@ -328,8 +328,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2017-2018 CIYOU Education.</strong> All rights
-    reserved.
+
   </footer>
 
 

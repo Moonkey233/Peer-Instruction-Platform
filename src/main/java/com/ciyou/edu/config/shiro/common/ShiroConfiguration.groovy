@@ -50,6 +50,9 @@ class ShiroConfiguration {
     @Value('${spring.redis.timeout}')
     private int timeout
 
+//    @Value('${spring.redis.password}')
+//    private String password
+
 
     /**
      * ShiroFilterFactoryBean 处理拦截资源文件问题。
